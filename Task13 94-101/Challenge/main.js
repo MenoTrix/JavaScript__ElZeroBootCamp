@@ -1,0 +1,63 @@
+let navBar = document.createElement("div");
+let navBar_logo = document.createElement("h2");
+let navBar_logo_text = document.createTextNode("ElZero");
+let navBar_Menu = document.createElement("ul");
+let links = ["Home", "About", "Services", "Contact"];
+navBar.appendChild(navBar_logo);
+navBar.appendChild(navBar_Menu);
+navBar_logo.appendChild(navBar_logo_text);
+for (let i = 0; i < links.length; i++) {
+  let navBar_Links = document.createElement("li");
+  navBar_Menu.appendChild(navBar_Links);
+  let menu_links = document.createTextNode(links[i]);
+  navBar_Links.appendChild(menu_links);
+  navBar_Links.style.display = "inline-block";
+  navBar_Links.style.marginLeft = "10px";
+}
+document.body.style.padding = "10px";
+document.body.style.boxSizing = "border-box";
+navBar.style.display = "flex";
+navBar.style.justifyContent = "space-between";
+navBar_Menu.style.listStyle = "none";
+navBar_Menu.style.marginTop = "30px";
+navBar_logo.style.color = "blue";
+document.body.append(navBar);
+
+let body_header = document.createElement("div");
+let contentLen = 16;
+let body_content = document.createElement("div");
+let body_content_span = document.createElement("span");
+let body_content_span_text = document.createTextNode("");
+body_header.style.height = "80vh";
+body_header.style.backgroundColor = "#eee";
+body_header.style.padding = "20px";
+body_header.style.display = "grid";
+body_header.style.gridTemplateColumns = "repeat(auto-fill,minmax(300px,1fr)";
+body_header.style.gap = "20px";
+for (let j = 0; j < contentLen; j++) {
+  let body_content_span = document.createElement("span");
+  let body_content_span_text = document.createTextNode(`${j + 1} Product`);
+  body_content_span.appendChild(body_content_span_text);
+  let body_content = document.createElement("div");
+  body_header.appendChild(body_content);
+  body_content.appendChild(body_content_span);
+  body_content.style.backgroundColor = "red";
+  body_content.style.position = "relative";
+  body_content_span.style.position = "absolute";
+  body_content_span.style.left = "50%";
+  body_content_span.style.top = "50%";
+  body_content_span.style.transform = "translate(-50%,-50%)";
+}
+let footerDiv = document.createElement("div");
+let footerP = document.createElement("p");
+footerDiv.style.backgroundColor = "blue";
+footerDiv.style.height = "50px";
+footerP.style.margin = "auto";
+footerP.style.padding = "20px";
+footerP.style.color = "white";
+footerP.style.textAlign = "center";
+let footerP_text = document.createTextNode("CopyRights2022");
+footerP.appendChild(footerP_text);
+footerDiv.appendChild(footerP);
+document.body.append(body_header);
+document.body.appendChild(footerDiv);

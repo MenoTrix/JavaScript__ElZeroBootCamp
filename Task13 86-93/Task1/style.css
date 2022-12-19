@@ -1,0 +1,32 @@
+/* body {
+  padding: 5px;
+}
+form {
+  background-color: #777;
+  width: 300px;
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
+.results div {
+  background-color: orange;
+  width: calc(100% / 4);
+  height: 50px;
+  display: inline-block;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+}
+.results section {
+  background-color: cyan;
+  width: calc(100% / 4);
+  height: 50px;
+  display: inline-block;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+}
